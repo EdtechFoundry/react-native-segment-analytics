@@ -10,7 +10,12 @@
 #import "RCTConvert.h"
 #endif
 
+#if __has_include(<Analytics/SEGAnalytics.h>)
 #import <Analytics/SEGAnalytics.h>
+#else
+#import "SEGAnalytics.h"
+#endif
+
 #import <Foundation/Foundation.h>
 
 @implementation SegmentAnalytics
